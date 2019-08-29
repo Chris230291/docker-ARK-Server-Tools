@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Make sure steam owns these directories
-sudo chown steam:steam -R /home/steam/
-sudo chmod -R 777 /etc/arkmanager/
-
 # Create base config if it doesnt exist
 if [[ ! -e /etc/arkmanager/arkmanager.cfg ]]
 then
@@ -18,6 +14,10 @@ then
 echo "Creating 'instance.cfg.example'"
 sudo curl -s --create-dirs -o /etc/arkmanager/instances/instance.cfg.example https://raw.githubusercontent.com/FezVrasta/ark-server-tools/master/tools/instance.cfg.example
 fi
+
+# Make sure steam owns these directories
+sudo chown steam:steam -R /home/steam/
+sudo chmod -R 777 /etc/arkmanager/
 
 if [ ${UPDATETOOLS} -eq 1 ]
 then
