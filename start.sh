@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Make sure steam owns these directories
-#sudo chown steam:steam -R /etc/arkmanager /home/steam/ARK
+#sudo chown steam:steam -R /etc/arkmanager
+sudo chmod -R 777 /etc/arkmanager/
 
 # Create base config if it doesnt exist
 if [[ ! -e /etc/arkmanager/arkmanager.cfg ]]
