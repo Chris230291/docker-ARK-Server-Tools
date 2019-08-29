@@ -16,8 +16,7 @@ sudo curl -s --create-dirs -o /etc/arkmanager/instances/instance.cfg.example htt
 fi
 
 # Make sure steam owns these directories
-sudo chown steam:steam -R /home/steam/
-sudo chmod -R 777 /etc/arkmanager/
+sudo chown steam:steam -R /home/steam/ /etc/arkmanager/
 
 if [ ${UPDATETOOLS} -eq 1 ]
 then
