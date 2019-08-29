@@ -8,7 +8,7 @@ ENV UPDATETOOLS 1
 ENV STARTSERVERS 1
 
 # Volumes
-VOLUME /etc/arkmanager /home/steam/ARK /home/steam/Steam
+#VOLUME /etc/arkmanager /home/steam/ARK /home/steam/Steam
 
 # Install Dependencies
 USER root
