@@ -41,7 +41,7 @@ RUN curl -sL http://git.io/vtf5N | sudo bash -s steam
 
 # Copy files
 COPY start.sh /home/steam/start.sh
-RUN sudo chmod 777 /home/steam/start.sh
+RUN chmod +x /home/steam/start.sh
 
 # Go
 ENTRYPOINT ["/home/steam/start.sh"]
