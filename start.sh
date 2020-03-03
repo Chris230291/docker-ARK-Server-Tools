@@ -5,7 +5,6 @@ if [[ ! -e /etc/arkmanager/arkmanager.cfg ]]
 then
 echo "Creating 'arkmanager.cfg'"
 sudo curl -s -o /etc/arkmanager/arkmanager.cfg https://raw.githubusercontent.com/FezVrasta/ark-server-tools/master/tools/arkmanager.cfg
-sudo sed -i -e 's!ARK-Staging!ARK/ARK-Staging!g' -e 's!ARK-Backups!ARK/ARK-Backups!g' /etc/arkmanager/arkmanager.cfg
 fi
 
 # Create instance example if it doesnt exist
@@ -16,7 +15,7 @@ sudo curl -s --create-dirs -o /etc/arkmanager/instances/instance.cfg.example htt
 fi
 
 # Make sure steam owns these directories
-sudo chown steam:steam -R /home/steam/ /etc/arkmanager/
+#sudo chown steam:steam -R /home/steam/ /etc/arkmanager/
 
 if [ ${UPDATETOOLS} -eq 1 ]
 then
@@ -31,4 +30,5 @@ fi
 echo "Done"
 
 # Hack to keep container running
-tail -f /dev/null
+#tail -f /dev/null
+sleep infinity
