@@ -19,7 +19,7 @@ sudo chown steam:steam -R /home/steam/ /etc/arkmanager/
 
 if [ ${UPDATETOOLS} -eq 1 ]
 then
-arkmanager upgrade-tools
+yes | arkmanager upgrade-tools
 fi
 
 if [ ${STARTSERVERS} -eq 1 ]
