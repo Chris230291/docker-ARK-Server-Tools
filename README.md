@@ -3,6 +3,7 @@ Simple dockerized instance of ARK Server Tools
 Parameters:
 
 `e UPDATETOOLS=1`   <-- Try to update ARK Server Tools when the container starts
+
 `e STARTSERVERS=1`  <-- Start all instances when the container starts
 
 Example:
