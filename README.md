@@ -2,11 +2,12 @@ Simple dockerized instance of ARK Server Tools
 
 Parameters:
 
--e UPDATETOOLS=1      <-- Try to update ARK Server Tools when the container starts
--e STARTSERVERS=1     <-- Start all instances when the container starts
+`e UPDATETOOLS=1`   <-- Try to update ARK Server Tools when the container starts
+`e STARTSERVERS=1`  <-- Start all instances when the container starts
 
 Example:
 
+```
 docker create \
 --name=ARK-Server-Tools \
 --net=host \
@@ -20,3 +21,4 @@ docker create \
 -e UPDATETOOLS=1 \
 -e STARTSERVERS=0 \
 chris230291/ark-server-tools
+```
