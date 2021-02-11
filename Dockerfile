@@ -7,9 +7,6 @@ ENV UPDATETOOLS 1
 # Start servers on startup?
 ENV STARTSERVERS 1
 
-# Volumes
-#VOLUME /etc/arkmanager /home/steam/ARK /home/steam/Steam
-
 # Install Dependencies
 USER root
 RUN apt-get update -y && apt-get install -y \
@@ -37,10 +34,10 @@ RUN sed -i '/\#includedir \/etc\/sudoers.d/a steam ALL=(ALL) NOPASSWD: ALL' /etc
 
 # Install ARK Server Tools
 USER steam
-RUN curl -sL http://git.io/vtf5N | sudo bash -s steam
+RUN curl -sL https://git.io/arkmanager | sudo bash -s steam
 
-# Copy files
-COPY start.sh /home/steam/start.sh
+# Copy start.sh
+COPY start.sh /home/steam/start.sh 
 RUN sudo chmod +x /home/steam/start.sh
 
 # Go
