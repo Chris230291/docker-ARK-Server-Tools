@@ -15,7 +15,7 @@ docker create \
 --restart=always \
 -v /path/on/host/ARK/Configs:/etc/arkmanager \
 -v /path/on/host/ARK/Steam:/home/steam/Steam \
--v /path/on/host/ARK:/home/steam/ARK \
+-v /path/on/host/ARK/ARK:/home/steam/ARK \
 -v /path/on/host/ARK/ARK-Backups:/home/steam/ARK-Backups \
 -v /path/on/host/ARK/ARK-Staging:/home/steam/ARK-Staging \
 -v /path/on/host/ARK/Logs:/var/log/arktools \
